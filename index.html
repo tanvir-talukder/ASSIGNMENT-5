@@ -264,4 +264,77 @@
     </div>
   </div>
   
+ <script>
+
+let count = 0;
+    let buttons = document.querySelectorAll(".heart-clicked");
+
+buttons.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    count++;
+     document.getElementById("counter").textContent = count;
+    
+  });
+});
+// Clear Call History
+  const clearBtn = document.getElementById("clear-btn");
+  const historyList = document.getElementById("history-list");
+  historyList.innerHTML = "";
+  // Add event listener
+  clearBtn.addEventListener("click", function() {
+    historyList.innerHTML = ""; // Removes all list items
+   
+  });
+
+
  
+  const callButtons = document.querySelectorAll(".call-btn");
+
+  // Add to history when a Call button is clicked
+  callButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const card = btn.closest(".card-body"); // find parent card body
+      const name = card.querySelector(".card-title").textContent;
+      const number = card.querySelector(".number").textContent;
+
+      // Remove "No call history available" if it's the only item
+      if (historyList.children.length === 1 && historyList.children[0].textContent.includes("No call history")) {
+        historyList.innerHTML = "";
+      }
+
+      // Add new call entry
+      const li = document.createElement("li");
+      li.className = "bg-gray-100 rounded-lg w-full flex justify-between p-6 cursor-pointer";
+     
+      historyList.appendChild(li);
+    //   Deduct 20 coins per call
+      const coin = document.getElementById("coin-number");
+      let coinValue = parseInt(coin.innerText);
+       
+
+       if (coinValue > 19) {
+        let coins = coinValue - 20;
+     alert(` ${name}              NUMBER: ${number}`);
+        li.innerHTML = `<span>${name}</span> <span class="text-gray-400">${number}</span>`;
+        coin.innerHTML = coins;
+
+             }  
+       else{
+        alert("Insufficient balance to make a call.");
+          li.innerHTML = "";
+          li.className = "";
+              }
+
+          
+    });
+  });
+
+  // Clear button functionality
+  clearBtn.addEventListener("click", () => {
+    historyList.innerHTML = "<li class='text-gray-400 text-center p-6'>No call history available</li>";
+  });
+</script> 
+
+
+</body>
+</html>
