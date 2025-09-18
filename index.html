@@ -294,10 +294,10 @@ buttons.forEach((btn, index) => {
   // Add to history when a Call button is clicked
   callButtons.forEach(btn => {
     btn.addEventListener("click", () => {
-      const card = btn.closest(".card-body"); // find parent card body
+      const card = btn.closest(".card-body"); 
       const name = card.querySelector(".card-title").textContent;
       const number = card.querySelector(".number").textContent;
-
+      
       // Remove "No call history available" if it's the only item
       if (historyList.children.length === 1 && historyList.children[0].textContent.includes("No call history")) {
         historyList.innerHTML = "";
@@ -316,7 +316,10 @@ buttons.forEach((btn, index) => {
        if (coinValue > 19) {
         let coins = coinValue - 20;
      alert(` ${name}              NUMBER: ${number}`);
-        li.innerHTML = `<span>${name}</span> <span class="text-gray-400">${number}</span>`;
+        
+
+     li.innerHTML = `<span>${name}</span> <span class="text-gray-400">${number}</span>`;
+        
         coin.innerHTML = coins;
 
              }  
