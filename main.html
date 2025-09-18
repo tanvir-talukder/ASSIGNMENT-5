@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BANGLADESH</title>
-    <link rel="icon" type="image/png" href="pictures/LOHO.png">
     <!-- daisy -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <!-- tailwind -->
@@ -22,7 +21,7 @@
             <div class="header-right">
                 <button class="btn  bg-green-100 rounded-full" id="heart"><span id="counter">0</span> <image src="pictures/rsz_heart.png" mode=""></button>
                 <button  class="btn bg-green-100 rounded-full"><span id="coin-number">40</span><img src="pictures/rsz_1dollar-coin_2140382.png" alt=""></button>
-                <button class="btn bg-green-600 rounded-full text-white"> copy</button>
+                <button class="btn bg-green-600 rounded-full text-white">2 copy</button>
             </div>
 
         </div>
@@ -33,7 +32,6 @@
      <h1 class="text-2xl font-bold">Emergency Service Directory</h1>
      <p class="text-sm mt-2">Government Emergency Services at Your Fingertip – A Project by Government of the People’s Republic of Bangladesh</p>
   </div>
- </main>
  <!-- Content -->
   <div class="grid lg:grid-cols-4 gap-6 p-6 bg-green-50 pl-[50px] pr-[50px]">
     <!-- Left: Services -->
@@ -265,7 +263,7 @@
       </div>
     </div>
   </div>
-
+ </main>
  <script>
 
 let count = 0;
@@ -292,87 +290,49 @@ buttons.forEach((btn, index) => {
  
   const callButtons = document.querySelectorAll(".call-btn");
 
-// Add to history when a Call button is clicked
-callButtons.forEach(btn => {
-  btn.addEventListener("click", () => {
-    const card = btn.closest(".card-body"); 
-    const name = card.querySelector(".card-title").textContent;
-    const number = card.querySelector(".number").textContent;
-    
-    // Remove "No call history available" if it's the only item
-    if (historyList.children.length === 1 && historyList.children[0].textContent.includes("No call history")) {
-      historyList.innerHTML = "";
-    }
+  // Add to history when a Call button is clicked
+  callButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const card = btn.closest(".card-body"); // find parent card body
+      const name = card.querySelector(".card-title").textContent;
+      const number = card.querySelector(".number").textContent;
 
-    // Add new call entry
-    const li = document.createElement("li");
-    li.className = "bg-gray-100 rounded-lg w-full flex justify-between p-6 cursor-pointer";
-   
-    historyList.appendChild(li);
+      // Remove "No call history available" if it's the only item
+      if (historyList.children.length === 1 && historyList.children[0].textContent.includes("No call history")) {
+        historyList.innerHTML = "";
+      }
 
-    // Deduct 20 coins per call
-    const coin = document.getElementById("coin-number");
-    let coinValue = parseInt(coin.innerText);
+      // Add new call entry
+      const li = document.createElement("li");
+      li.className = "bg-gray-100 rounded-lg w-full flex justify-between p-6 cursor-pointer";
+     
+      historyList.appendChild(li);
+    //   Deduct 20 coins per call
+      const coin = document.getElementById("coin-number");
+      let coinValue = parseInt(coin.innerText);
+       
 
-    if (coinValue > 19) {
-      let coins = coinValue - 20;
+       if (coinValue > 19) {
+        let coins = coinValue - 20;
+     alert(` ${name}              NUMBER: ${number}`);
+        li.innerHTML = `<span>${name}</span> <span class="text-gray-400">${number}</span>`;
+        coin.innerHTML = coins;
 
-      // Get current time
-      const now = new Date();
-      const time = now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" });
+             }  
+       else{
+        alert("Insufficient balance to make a call.");
+          li.innerHTML = "";
+          li.className = "";
+              }
 
-      alert(`${name}   NUMBER: ${number}`);
-
-      // Add name, number, and time
-      li.innerHTML = `
-        <span>${name}</span> 
-        <span class="text-gray-400">${number}</span>
-        <span class="text-gray-500 ml-4">${time}</span>
-      `;
-
-      coin.innerHTML = coins;
-    } else {
-      alert("Insufficient balance to make a call.");
-      li.innerHTML = "";
-      li.className = "";
-    }
-  });
-
+          
+    });
   });
 
   // Clear button functionality
   clearBtn.addEventListener("click", () => {
     historyList.innerHTML = "<li class='text-gray-400 text-center p-6'>No call history available</li>";
   });
-
-  //copy button functionality
-  // Select all Copy buttons
-const copyButtons = document.querySelectorAll(".btn i.fa-copy");
-
-// Get the copy counter span (you can put an id for it)
-const copyCounter = document.createElement("span");
-copyCounter.id = "copy-counter";
-copyCounter.textContent = "0";
-document.querySelector(".header-right .btn.bg-green-600").prepend(copyCounter); 
-
-let copyCount = 0;
-
-// Add event listener to each copy button
-copyButtons.forEach(copyIcon => {
-  copyIcon.parentElement.addEventListener("click", () => {
-    const card = copyIcon.closest(".card-body"); 
-    const number = card.querySelector(".number").textContent.trim();
-
-    // Copy to clipboard
-    navigator.clipboard.writeText(number).then(() => {
-      copyCount++;
-      copyCounter.textContent = copyCount;  // update counter
-      alert(`Copied: ${number}`);
-    }).catch(err => {
-      console.error("Failed to copy text: ", err);
-    });
-  });
-});
 </script> 
 
 
