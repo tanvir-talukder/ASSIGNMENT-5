@@ -11,10 +11,7 @@
 
  <!-- Font Awesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
 </head>
-
-
 <body class="">
     <header class="p-6 shadow-md ">
         <div class="header flex justify-between pl-[50px] pr-[50px]">
@@ -22,8 +19,8 @@
             <p class="text-[20px] font-bold text-green-700 h-[50px] mt-[0]">Emergency <br>Service</p>
             </div>
             <div class="header-right">
-                <button class="btn  bg-green-100 rounded-full">0 ❤️</button>
-                <button class="btn bg-green-100 rounded-full">100 📞</button>
+                <button class="btn  bg-green-100 rounded-full" id="heart"><span id="counter">0</span> <image src="pictures/rsz_heart.png" mode=""></button>
+                <button  class="btn bg-green-100 rounded-full"><span id="coin-number">40</span><img src="pictures/rsz_1dollar-coin_2140382.png" alt=""></button>
                 <button class="btn bg-green-600 rounded-full text-white">2 copy</button>
             </div>
 
@@ -35,8 +32,7 @@
      <h1 class="text-2xl font-bold">Emergency Service Directory</h1>
      <p class="text-sm mt-2">Government Emergency Services at Your Fingertip – A Project by Government of the People’s Republic of Bangladesh</p>
   </div>
-
-  <!-- Content -->
+ <!-- Content -->
   <div class="grid lg:grid-cols-4 gap-6 p-6 bg-green-50 pl-[50px] pr-[50px]">
     <!-- Left: Services -->
     <div class="lg:col-span-3 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -49,16 +45,16 @@
             <div>
              <div class="flex justify-between">
             <div class="bg-pink-100 rounded-lg p-2"><img src="pictures/emergency.png" alt=""></div>
-            <div>🤍</div>
+          <div><button class="heart-clicked"><i class="fa-regular fa-heart"></i></button></div>
         </div>
           <h2 class="card-title text-xl font-bold mt-6">National Emergency Number</h2>
        <p>National Nmergency</p>
-          <p class="font-bold text-2xl mt-9 ml-1">999</p>
-            <button class="badge p-4 mt-2 h-[20px] bg-gray-200 rounded-full text-gray">Service</span>
+          <p class="font-bold text-2xl mt-9 ml-1"><span class="number">999</span></p>
+            <button class="badge p-4 mt-2 h-[20px] bg-gray-200 rounded-full text-gray">All</span>
           </div>
           <div class="flex gap-2 mt-8 ">
             <button class="btn rounded-lg btn-sm w-[50%]"><i class="fa-solid fa-copy"></i> Copy</button>
-            <button class="btn rounded-lg btn-sm text-white w-[50%] bg-green-600"><i class="fa-solid fa-phone"></i> Call</button>
+            <button class="call-btn btn rounded-lg btn-sm text-white w-[50%] bg-green-600"><i class="fa-solid fa-phone"></i> Call</button>
           </div>
         </div>
       </div>
@@ -72,16 +68,16 @@
             <div>
              <div class="flex justify-between">
             <div class="bg-pink-100 rounded-lg p-2"><img src="pictures/police.png" alt=""></div>
-            <div>🤍</div>
+            <div><button class="heart-clicked"><i class="fa-regular fa-heart"></i></button></div>
         </div>
           <h2 class="card-title text-xl font-bold mt-6">Police Helpline Number</h2>
        <p>Police Helpline</p>
-          <p class="font-bold text-2xl mt-9 ml-1">999</p>
-            <button class="badge p-4 mt-2 h-[20px] bg-gray-200 rounded-full text-gray">Service</span>
+          <p class="font-bold text-2xl mt-9 ml-1"><span class="number">999</span></p>
+            <button class="badge p-4 mt-2 h-[20px] bg-gray-200 rounded-full text-gray">Police</span>
           </div>
           <div class="flex gap-2 mt-8 ">
             <button class="btn rounded-lg btn-sm w-[50%]"><i class="fa-solid fa-copy"></i> Copy</button>
-            <button class="btn rounded-lg btn-sm text-white w-[50%] bg-green-600"><i class="fa-solid fa-phone"></i> Call</button>
+            <button class="call-btn btn rounded-lg btn-sm text-white w-[50%] bg-green-600"><i class="fa-solid fa-phone"></i> Call</button>
           </div>
         </div>
       </div>
@@ -93,16 +89,16 @@
             <div>
              <div class="flex justify-between">
             <div class="bg-pink-100 rounded-lg p-2"><img src="pictures/fire-service.png" alt=""></div>
-            <div>🤍</div>
+            <div><button class="heart-clicked"><i class="fa-regular fa-heart"></i></button></div>
         </div>
           <h2 class="card-title text-xl font-bold mt-6">Fire Service Number</h2>
        <p>Fire Service</p>
-          <p class="font-bold text-2xl mt-9 ml-1">999</p>
-            <button class="badge p-4 mt-2 h-[20px] bg-gray-200 rounded-full text-gray">Service</span>
+          <p class="font-bold text-2xl mt-9 ml-1"><span class="number">999</span></p>
+            <button class="badge p-4 mt-2 h-[20px] bg-gray-200 rounded-full text-gray">Fire</span>
           </div>
           <div class="flex gap-2 mt-8 ">
             <button class="btn rounded-lg btn-sm w-[50%]"><i class="fa-solid fa-copy"></i> Copy</button>
-            <button class="btn rounded-lg btn-sm text-white w-[50%] bg-green-600"><i class="fa-solid fa-phone"></i> Call</button>
+            <button class="call-btn btn rounded-lg btn-sm text-white w-[50%] bg-green-600"><i class="fa-solid fa-phone"></i> Call</button>
           </div>
         </div>
       </div>
@@ -114,16 +110,16 @@
             <div>
              <div class="flex justify-between">
             <div class="bg-pink-100 rounded-lg p-2"><img src="pictures/ambulance.png" alt=""></div>
-            <div>🤍</div>
+          <div><button class="heart-clicked"><i class="fa-regular fa-heart"></i></button></div>
         </div>
           <h2 class="card-title text-xl font-bold mt-6">Ambulance service Number</h2>
        <p>Ambulance service</p>
-          <p class="font-bold text-2xl mt-9 ml-1">999</p>
-            <button class="badge p-4 mt-2 h-[20px] bg-gray-200 rounded-full text-gray">Service</span>
+          <p class="font-bold text-2xl mt-9 ml-1"><span class="number">999</span></p>
+            <button class="badge p-4 mt-2 h-[20px] bg-gray-200 rounded-full text-gray">Health</span>
           </div>
           <div class="flex gap-2 mt-8 ">
             <button class="btn rounded-lg btn-sm w-[50%]"><i class="fa-solid fa-copy"></i> Copy</button>
-            <button class="btn rounded-lg btn-sm text-white w-[50%] bg-green-600"><i class="fa-solid fa-phone"></i> Call</button>
+            <button class="call-btn btn rounded-lg btn-sm text-white w-[50%] bg-green-600"><i class="fa-solid fa-phone"></i> Call</button>
           </div>
         </div>
       </div>
@@ -135,16 +131,16 @@
             <div>
              <div class="flex justify-between">
             <div class="bg-pink-100 rounded-lg p-2"><img src="pictures/emergency.png" alt=""></div>
-            <div>🤍</div>
+            <div><button class="heart-clicked"><i class="fa-regular fa-heart"></i></button></div>
         </div>
           <h2 class="card-title text-xl font-bold mt-6">Women and Child Helpline</h2>
        <p>Women and Child</p>
-          <p class="font-bold text-2xl mt-9 ml-1">333</p>
-            <button class="badge p-4 mt-2 h-[20px] bg-gray-200 rounded-full text-gray">Service</span>
+          <p class="font-bold text-2xl mt-9 ml-1"><span class="number">333</span></p>
+            <button class="badge p-4 mt-2 h-[20px] bg-gray-200 rounded-full text-gray">Help</span>
           </div>
           <div class="flex gap-2 mt-8 ">
             <button class="btn rounded-lg btn-sm w-[50%]"><i class="fa-solid fa-copy"></i> Copy</button>
-            <button class="btn rounded-lg btn-sm text-white w-[50%] bg-green-600"><i class="fa-solid fa-phone"></i> Call</button>
+            <button class="call-btn btn rounded-lg btn-sm text-white w-[50%] bg-green-600"><i class="fa-solid fa-phone"></i> Call</button>
           </div>
         </div>
       </div>
@@ -157,16 +153,16 @@
             <div>
              <div class="flex justify-between">
             <div class="bg-pink-100 rounded-lg p-2"><img src="pictures/emergency.png" alt=""></div>
-            <div>🤍</div>
+            <div><button class="heart-clicked"><i class="fa-regular fa-heart"></i></button></div>
         </div>
           <h2 class="card-title text-xl font-bold mt-6">Anti Corruption Helpline</h2>
        <p>Anti Corruption</p>
-          <p class="font-bold text-2xl mt-9 ml-1">123335343</p>
-            <button class="badge p-4 mt-2 h-[20px] bg-gray-200 rounded-full text-gray">Service</span>
+          <p class="font-bold text-2xl mt-9 ml-1"><span class="number">12343434</span></p>
+            <button class="badge p-4 mt-2 h-[20px] bg-gray-200 rounded-full text-gray">Govt.</span>
           </div>
           <div class="flex gap-2 mt-8 ">
             <button class="btn rounded-lg btn-sm w-[50%]"><i class="fa-solid fa-copy"></i> Copy</button>
-            <button class="btn rounded-lg btn-sm text-white w-[50%] bg-green-600"><i class="fa-solid fa-phone"></i> Call</button>
+            <button class="call-btn btn rounded-lg btn-sm text-white w-[50%] bg-green-600"><i class="fa-solid fa-phone"></i> Call</button>
           </div>
         </div>
       </div>
@@ -178,16 +174,16 @@
             <div>
              <div class="flex justify-between">
             <div class="bg-pink-100 rounded-lg p-2"><img src="pictures/emergency.png" alt=""></div>
-            <div>🤍</div>
+           <div><button class="heart-clicked"><i class="fa-regular fa-heart"></i></button></div>
         </div>
           <h2 class="card-title text-xl font-bold mt-6">Electricity Helpline</h2>
        <p>Electricity</p>
-          <p class="font-bold text-2xl mt-9 ml-1">111</p>
-            <button class="badge p-4 mt-2 h-[20px] bg-gray-200 rounded-full text-gray">Service</span>
+          <p class="font-bold text-2xl mt-9 ml-1"><span class="number">999</span></p>
+            <button class="badge p-4 mt-2 h-[20px] bg-gray-200 rounded-full text-gray">Electricity</span>
           </div>
           <div class="flex gap-2 mt-8 ">
             <button class="btn rounded-lg btn-sm w-[50%]"><i class="fa-solid fa-copy"></i> Copy</button>
-            <button class="btn rounded-lg btn-sm text-white w-[50%] bg-green-600"><i class="fa-solid fa-phone"></i> Call</button>
+            <button class="call-btn btn rounded-lg btn-sm text-white w-[50%] bg-green-600"><i class="fa-solid fa-phone"></i> Call</button>
           </div>
         </div>
       </div>
@@ -200,16 +196,16 @@
             <div>
              <div class="flex justify-between">
             <div class="bg-pink-100 rounded-lg p-2"><img src="pictures/emergency.png" alt=""></div>
-            <div>🤍</div>
+           <div><button class="heart-clicked"><i class="fa-regular fa-heart"></i></button></div>
         </div>
           <h2 class="card-title text-xl font-bold mt-6">Brac Helpline</h2>
        <p>BRAC</p>
-          <p class="font-bold text-2xl mt-9 ml-1">999</p>
-            <button class="badge p-4 mt-2 h-[20px] bg-gray-200 rounded-full text-gray">Service</span>
+          <p class="font-bold text-2xl mt-9 ml-1"><span class="number">999</span></p>
+            <button class="badge p-4 mt-2 h-[20px] bg-gray-200 rounded-full text-gray">BRAC</span>
           </div>
           <div class="flex gap-2 mt-8 ">
             <button class="btn rounded-lg btn-sm w-[50%]"><i class="fa-solid fa-copy"></i> Copy</button>
-            <button class="btn rounded-lg btn-sm text-white w-[50%] bg-green-600"><i class="fa-solid fa-phone"></i> Call</button>
+            <button class="call-btn btn rounded-lg btn-sm text-white w-[50%] bg-green-600"><i class="fa-solid fa-phone"></i> Call</button>
           </div>
         </div>
       </div>
@@ -222,23 +218,22 @@
             <div>
              <div class="flex justify-between">
             <div class="bg-pink-100 rounded-lg p-2"><img src="pictures/Bangladesh-Railway.png" alt=""></div>
-            <div>🤍</div>
+           <div><button  class="heart-clicked"><i class="fa-regular fa-heart"></i></button></div>
         </div>
           <h2 class="card-title text-xl font-bold mt-6">Bangladesh Railway Helpline</h2>
        <p>Bangladesh Railway</p>
-          <p class="font-bold text-2xl mt-9 ml-1">999</p>
-            <button class="badge p-4 mt-2 h-[20px] bg-gray-200 rounded-full text-gray">Service</span>
+          <p class="font-bold text-2xl mt-9 ml-1"><span class="number">999</span></p>
+            <button class="badge p-4 mt-2 h-[20px] bg-gray-200 rounded-full text-gray">Railway</span>
           </div>
           <div class="flex gap-2 mt-8 ">
             <button class="btn rounded-lg btn-sm w-[50%]"><i class="fa-solid fa-copy"></i> Copy</button>
-            <button class="btn rounded-lg btn-sm text-white w-[50%] bg-green-600"><i class="fa-solid fa-phone"></i> Call</button>
+            <button class="call-btn btn rounded-lg btn-sm text-white w-[50%] bg-green-600"><i class="fa-solid fa-phone"></i> Call</button>
           </div>
         </div>
       </div>
-      <!-- Add more cards like Fire, Ambulance, etc. using same structure -->
+ 
 
     </div>
-
     <!-- Right: Call History -->
     <div class="card bg-base-100 shadow-xl">
       <div class="card-body">
@@ -246,18 +241,100 @@
           <h2 class="card-title">
  
 
-<i class="fa-solid fa-clock-rotate-left"></i> Call History</h2>
-          <button class="btn bg-green-600 rounded-full text-white">Clear</button>
+           <i class="fa-solid fa-clock-rotate-left"></i> Call History</h2>
+          <button id="clear-btn" class="btn bg-green-600 rounded-full text-white" >Clear</button>
         </div>
         <div class="divider"></div>
-        <ul class="space-y-2 text-sm">
-          <button class="bg-gray-100 rounded-lg w-[100%] flex justify-between p-6"><li>Fire Service Number</li> <span class="text-gray-400 block">11:36:58 AM</span></li></button>
-         <button class="bg-gray-100 rounded-lg w-[100%] flex justify-between p-6"> <li>National Emergency Number</li> <span class="text-gray-400 block">11:36:58 AM</span></li></button>
-         <button class="bg-gray-100 rounded-lg w-[100%] flex justify-between p-6"> <li>Ambulance Service </li><span class="text-gray-400 block">11:36:58 AM</span></li></button>
-         <button class="bg-gray-100 rounded-lg w-[100%] flex justify-between p-6"> <li>Railway Helpline </li><span class="text-gray-400 block">11:36:58 AM</span></li></button>
+        <ul id="history-list" class="space-y-2 text-sm">
+          
+         <li><button class="bg-gray-100 rounded-lg w-[100%] flex justify-between p-6"> National Emergency Number<br> <span class="text-gray-400 block">999</span></button></li>
+            <button class="bg-gray-100 rounded-lg w-[100%] flex justify-between p-6"> <li>Police Helpline</li> <span class="text-gray-400 block">999</span></li></button>
+         <button class="bg-gray-100 rounded-lg w-[100%] flex justify-between p-6"><li>Fire Service Number</li> <span class="text-gray-400 block">999</span></li></button>
+         <button class="bg-gray-100 rounded-lg w-[100%] flex justify-between p-6"> <li>Ambulance Service </li><span class="text-gray-400 block">999</span></li></button>
+         
+          <button class="bg-gray-100 rounded-lg w-[100%] flex justify-between p-6"><li>Women and Child Helpline</li> <span class="text-gray-400 block">333</span></li></button>
+           <button class="bg-gray-100 rounded-lg w-[100%] flex justify-between p-6"> <li>Anti Corruption Helpline</li> <span class="text-gray-400 block">1233334554</span></li></button>
+         <button class="bg-gray-100 rounded-lg w-[100%] flex justify-between p-6"> <li>Electricity Helpline</li> <span class="text-gray-400 block">111</span></li></button>
+         <button class="bg-gray-100 rounded-lg w-[100%] flex justify-between p-6"> <li>Brac Helpline</li> <span class="text-gray-400 block">999</span></li></button>
+      <button class="bg-gray-100 rounded-lg w-[100%] flex justify-between p-6"> <li>Railway Helpline </li><span class="text-gray-400 block">999</span></li></button>
+        
+      
         </ul>
       </div>
     </div>
   </div>
+ </main>
+ <script>
+
+let count = 0;
+    let buttons = document.querySelectorAll(".heart-clicked");
+
+buttons.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    count++;
+     document.getElementById("counter").textContent = count;
+    
+  });
+});
+// Clear Call History
+  const clearBtn = document.getElementById("clear-btn");
+  const historyList = document.getElementById("history-list");
+  historyList.innerHTML = "";
+  // Add event listener
+  clearBtn.addEventListener("click", function() {
+    historyList.innerHTML = ""; // Removes all list items
+   
+  });
+
+
+ 
+  const callButtons = document.querySelectorAll(".call-btn");
+
+  // Add to history when a Call button is clicked
+  callButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const card = btn.closest(".card-body"); // find parent card body
+      const name = card.querySelector(".card-title").textContent;
+      const number = card.querySelector(".number").textContent;
+
+      // Remove "No call history available" if it's the only item
+      if (historyList.children.length === 1 && historyList.children[0].textContent.includes("No call history")) {
+        historyList.innerHTML = "";
+      }
+
+      // Add new call entry
+      const li = document.createElement("li");
+      li.className = "bg-gray-100 rounded-lg w-full flex justify-between p-6 cursor-pointer";
+     
+      historyList.appendChild(li);
+    //   Deduct 20 coins per call
+      const coin = document.getElementById("coin-number");
+      let coinValue = parseInt(coin.innerText);
+       
+
+       if (coinValue > 19) {
+        let coins = coinValue - 20;
+     alert(` ${name}              NUMBER: ${number}`);
+        li.innerHTML = `<span>${name}</span> <span class="text-gray-400">${number}</span>`;
+        coin.innerHTML = coins;
+
+             }  
+       else{
+        alert("Insufficient balance to make a call.");
+          li.innerHTML = "";
+          li.className = "";
+              }
+
+          
+    });
+  });
+
+  // Clear button functionality
+  clearBtn.addEventListener("click", () => {
+    historyList.innerHTML = "<li class='text-gray-400 text-center p-6'>No call history available</li>";
+  });
+</script> 
+
+
 </body>
 </html>
